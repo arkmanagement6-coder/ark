@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ARK Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .inner-hero { background: var(--primary-blue); padding: 180px 0 100px; text-align: center; color: var(--white); position: relative; overflow: hidden; }
+        .inner-hero::after { content: ''; position: absolute; top: -50%; left: -20%; width: 60%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%); transform: rotate(30deg); }
+        .inner-hero h1 { font-size: 4rem; margin-bottom: 15px; font-weight: 800; }
+        
+        .value-card { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); border-bottom: 4px solid transparent; }
+        .value-card:hover { transform: translateY(-10px); border-bottom-color: var(--secondary-red); }
+        .value-icon { font-size: 2.5rem; color: var(--secondary-red); margin-bottom: 20px; }
+
+        .timeline { position: relative; max-width: 1000px; margin: 50px auto; padding: 20px 0; }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; width: 2px; height: 100%; background: #e0e0e0; transform: translateX(-50%); }
+        .timeline-item { margin-bottom: 50px; position: relative; width: 50%; padding: 0 40px; }
+        .timeline-item:nth-child(odd) { left: 0; text-align: right; }
+        .timeline-item:nth-child(even) { left: 50%; text-align: left; }
+        .timeline-dot { position: absolute; width: 20px; height: 20px; background: var(--secondary-red); border-radius: 50%; top: 5px; box-shadow: 0 0 10px rgba(230,57,70,0.5); }
+        .timeline-item:nth-child(odd) .timeline-dot { right: -10px; }
+        .timeline-item:nth-child(even) .timeline-dot { left: -10px; }
+        .timeline-content h3 { color: var(--primary-blue); font-size: 1.5rem; }
+        .timeline-content span { font-weight: 800; color: var(--orange); }
+
+        .culture-section { background: linear-gradient(rgba(10,37,92,0.9), rgba(10,37,92,0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed; color: var(--white); padding: 100px 0; }
+
+        @media (max-width: 768px) {
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 50px; }
+            .timeline-dot { left: 10px !important; }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1428184878228303');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1428184878228303&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text"><span class="highlight">A</span>RK <span class="highlight">M</span>anagement</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-btn">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="nav-btn active">About <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-btn">Services <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#web-dev">Website Design & Development</a></li>
+                            <li><a href="services.html#ecommerce">E-commerce Store Design & Dev</a></li>
+                            <li><a href="services.html#google-ads">Google Ads</a></li>
+                            <li><a href="services.html#meta-ads">Meta Ads</a></li>
+                            <li><a href="services.html#seo">SEO</a></li>
+                            <li><a href="services.html#smm">Social Media Management</a></li>
+                            <li><a href="services.html#whatsapp">WhatsApp Marketing</a></li>
+                            <li><a href="services.html#crm">CRM Integration</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="nav-btn">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/918433206010" class="btn btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Whatsapp Connect
+                </a>
+                <button class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="container">
+            <span class="badge" style="background: var(--white); color: var(--primary-blue); margin-bottom: 20px;">The ARK Story</span>
+            <h1>Crafting Digital <br><span class="text-orange">Success Stories</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; opacity: 0.8;">We Are More Than An Agency; We Are Your Strategic Partners In Growth, Dedicated To Elevating Your Brand Through Innovation.</p>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="section reveal about-section">
+        <div class="container">
+            <div class="about-modern-grid">
+                <!-- Left: Creative Image Composition -->
+                <div class="about-image-stack">
+                    <div class="about-image-bg"></div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" class="about-main-img">
+                    <div class="about-years-badge">
+                        <h3>05+</h3>
+                        <p>Years of Excellence</p>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="about-content">
+                    <span class="badge" style="margin-bottom: 20px;">Premium Growth Partner</span>
+                    <h2 class="about-main-heading">Transforming Businesses into <span class="text-red">Digital Brands</span></h2>
+                    
+                    <p class="about-main-desc">At ARK Management, we are passionate about transforming businesses into powerful digital brands. We are a full-service IT and Digital Marketing company dedicated to helping startups, small businesses, and enterprises grow their online presence, generate quality leads, and achieve measurable results.</p>
+                                        
+                    <div class="about-check-list">
+                        <div class="check-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Build digital systems that convert visitors into customers.</span>
+                        </div>
+                        <div class="check-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Combine strategy, creativity, and technology for real growth.</span>
+                        </div>
+                        <div class="check-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Scale faster with performance-driven marketing solutions.</span>
+                        </div>
+                    </div>
+
+                    <div class="mission-vision-grid">
+                        <div class="mv-box">
+                            <h4><i class="fa-solid fa-bullseye"></i> Our Mission</h4>
+                            <p>Empower businesses with innovative digital solutions that drive growth, increase visibility, and maximize ROI.</p>
+                        </div>
+                        <div class="mv-box">
+                            <h4><i class="fa-solid fa-eye"></i> Our Vision</h4>
+                            <p>Become India's most trusted growth partner, helping thousands of businesses succeed in the digital world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section reveal" style="background: var(--bg-gray);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem;">The Values That <span class="text-red">Drive Us</span></h2>
+                <p>Integrity and innovation are at the heart of everything we do.</p>
+            </div>
+            <div class="grid grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div class="value-card">
+                    <i class="fa-solid fa-lightbulb value-icon"></i>
+                    <h3>Innovation</h3>
+                    <p>We stay ahead of digital trends to provide you with the most advanced growth solutions.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-chart-line value-icon"></i>
+                    <h3>Results Driven</h3>
+                    <p>Every strategy we build is focused on one thing: achieving measurable ROI for your business.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa-solid fa-shield-heart value-icon"></i>
+                    <h3>Transparency</h3>
+                    <p>We believe in honest communication and providing clear reports on your campaign performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section class="section reveal">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="font-size: 2.5rem;">Our <span class="text-red">Journey</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>2021</span>
+                        <h3>The Foundation</h3>
+                        <p>ARK Management was started with a vision to revolutionize digital marketing for local businesses.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>2022</span>
+                        <h3>Scaling Up</h3>
+                        <p>Expanded our team and started offering full-scale IT and Web Development solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>2023</span>
+                        <h3>Global Reach</h3>
+                        <p>Successfully managed over 5M+ in ad spend and delivered 500+ global projects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>2024</span>
+                        <h3>Industry Leaders</h3>
+                        <p>Recognized as a leading agency for high-ROI performance marketing and advanced IT solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>2025</span>
+                        <h3>AI Integration</h3>
+                        <p>Pioneering AI-driven marketing automation and predictive analytics for our global clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span>2026</span>
+                        <h3>Global Expansion</h3>
+                        <p>Establishing physical offices in 3 new international markets and empowering 5000+ businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="culture-section reveal">
+        <div class="container text-center">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Our Work <span class="text-orange">Culture</span></h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; line-height: 1.8; font-size: 1.1rem;">At ARK Management, we foster a culture of constant learning and collaboration. We believe that a happy team delivers the best results for our clients. We work hard, celebrate every win, and constantly push the boundaries of what's possible.</p>
+            <div class="grid grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" style="border-radius: 15px; height: 400px; object-fit: cover; width: 100%;">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" style="border-radius: 15px; height: 400px; object-fit: cover; width: 100%;">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" style="border-radius: 15px; height: 400px; object-fit: cover; width: 100%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" style="text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 40px;">Let's Build Something <span class="text-red">Great Together</span></h2>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary" style="padding: 15px 40px;">Join Our Team</a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 15px 40px; border: 2px solid var(--secondary-red); color: var(--secondary-red);">Work With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text"><span class="highlight">A</span>RK <span class="highlight">M</span>anagement</span>
+                        </a>
+                    </div>
+                    <p style="margin-top: 20px; opacity: 0.7;">We are a result-oriented digital marketing agency helping businesses scale with data-driven strategies and premium IT solutions.</p>
+                    <div class="footer-contact" style="margin-top: 20px;">
+                        <p style="opacity: 0.7; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-phone" style="color: var(--secondary-red);"></i>
+                            <span>+91 8433206010</span>
+                        </p>
+                        <p style="opacity: 0.7; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-envelope" style="color: var(--secondary-red);"></i>
+                            <span>arkmanagementagra@gmail.com</span>
+                        </p>
+                        <p style="opacity: 0.7; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-location-dot" style="color: var(--secondary-red);"></i>
+                            <span>21/272/1/4-A Patel Nagar, Jeoni Mandi, Agra 282004</span>
+                        </p>
+                    </div>
+                    
+                    <div class="footer-pay-now" style="margin-top: 20px; margin-bottom: 20px;">
+                        <a href="pay.html" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3); border-radius: 50px;">
+                            <i class="fa-solid fa-credit-card"></i> Pay Online Now
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61567641386250" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/arkmanagementagra/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/118114291/admin/dashboard/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    
+                
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#web-dev">Web Development</a></li>
+                        <li><a href="services.html#google-ads">Google Ads</a></li>
+                        <li><a href="services.html#meta-ads">Meta Ads</a></li>
+                        <li><a href="services.html#seo">SEO</a></li>
+                        <li><a href="services.html#whatsapp">WhatsApp Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARK Management. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+

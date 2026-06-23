@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard | ARK Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html">
+                    <span class="logo-text" style="color: var(--white); font-size: 1.4rem;"><span class="highlight" style="color: var(--secondary-red);">R</span>evanta <span class="highlight" style="color: var(--secondary-red);">G</span>rowth</span>
+                </a>
+                <button class="mobile-menu-toggle" id="sidebar-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fa-solid fa-border-all"></i> Dashboard Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i> Profile Details</a></li>
+                <li><a href="#"><i class="fa-solid fa-building"></i> Business Details</a></li>
+                <li><a href="#"><i class="fa-solid fa-list-check"></i> Service Status</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-invoice-dollar"></i> Quotes & Invoices</a></li>
+                <li><a href="#"><i class="fa-solid fa-credit-card"></i> Payment Status</a></li>
+                <li><a href="#"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Documents</a></li>
+                <li><a href="#"><i class="fa-solid fa-plus-circle"></i> Request New Service</a></li>
+                <li style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;"><a href="#"><i class="fa-solid fa-headset"></i> Chat & Support</a></li>
+                <li><a href="#"><i class="fa-solid fa-user-tie"></i> Assigned Executive</a></li>
+                <li><a href="#"><i class="fa-solid fa-lock"></i> Change Password</a></li>
+                <li><a href="login.html" style="color: #fca5a5;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <header class="dashboard-header">
+                <div>
+                    <h2 style="font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 600;">Welcome back, TechStore! 👋</h2>
+                    <p style="color: #666; font-size: 0.9rem;">Here is what's happening with your projects today.</p>
+                </div>
+                <div class="user-profile">
+                    <button class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;"><i class="fa-solid fa-plus"></i> Request Service</button>
+                    <div class="user-avatar">TS</div>
+                </div>
+            </header>
+
+            <div class="dashboard-body">
+                
+                <!-- Quick Stats -->
+                <div class="dash-stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="stat-info">
+                            <h4>Active Services</h4>
+                            <h2>3</h2>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon" style="background: rgba(37, 211, 102, 0.1); color: #166534;"><i class="fa-solid fa-check-circle"></i></div>
+                        <div class="stat-info">
+                            <h4>Completed Projects</h4>
+                            <h2>1</h2>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon" style="background: rgba(230, 57, 70, 0.1); color: var(--secondary-red);"><i class="fa-solid fa-file-invoice"></i></div>
+                        <div class="stat-info">
+                            <h4>Pending Invoices</h4>
+                            <h2>0</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity & Service Status -->
+                <div class="dash-main-grid">
+                    <div class="dash-card">
+                        <h3><i class="fa-solid fa-list-check"></i> Current Services Status</h3>
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Service Name</th>
+                                        <th>Start Date</th>
+                                        <th>Status</th>
+                                        <th>Progress</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Website Development</td>
+                                        <td>10 May 2026</td>
+                                        <td><span class="status-badge status-new">In Progress</span></td>
+                                        <td>65%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Google Ads Campaign</td>
+                                        <td>12 May 2026</td>
+                                        <td><span class="status-badge status-contacted">Setup Phase</span></td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Logo Design</td>
+                                        <td>05 May 2026</td>
+                                        <td><span class="status-badge status-converted">Completed</span></td>
+                                        <td>100%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <h3><i class="fa-solid fa-user-tie"></i> Assigned Executive</h3>
+                        <div style="text-align: center; margin-top: 30px;">
+                            <img src="https://ui-avatars.com/api/?name=Ravi+Singh+Dhakre&background=0a255c&color=fff" alt="Executive" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 15px;">
+                            <h4 style="font-size: 1.2rem; margin-bottom: 5px;">Ravi Singh Dhakre</h4>
+                            <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">Senior Account Manager</p>
+                            <a href="https://wa.me/918433206010" target="_blank" class="btn btn-whatsapp" style="width: 100%; justify-content: center;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
+

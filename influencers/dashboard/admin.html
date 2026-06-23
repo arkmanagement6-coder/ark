@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | ARK Creator Network</title>
+    <link rel="stylesheet" href="/influencers/css/influencers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: var(--gray-100); display: flex; min-height: 100vh; }
+        .sidebar { width: 260px; background: #000; color: white; padding: 2rem 1.5rem; position: fixed; height: 100vh; }
+        .main-content { margin-left: 260px; flex: 1; padding: 2rem; }
+        .sidebar-menu { display: flex; flex-direction: column; gap: 0.5rem; }
+        .menu-item { padding: 0.75rem 1rem; border-radius: var(--radius-md); display: flex; align-items: center; gap: 1rem; color: var(--gray-400); transition: var(--transition); }
+        .menu-item:hover, .menu-item.active { background: #333; color: white; }
+        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+        .table-container { background: white; border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm); }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th { text-align: left; padding: 1rem; color: var(--gray-500); border-bottom: 1px solid var(--gray-200); }
+        td { padding: 1rem; border-bottom: 1px solid var(--gray-100); }
+        .btn-action { padding: 0.3rem 0.6rem; font-size: 0.8rem; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-logo" style="color: var(--white);">ARK ADMIN</div>
+        <div class="sidebar-menu">
+            <a href="#" class="menu-item active"><i class="fas fa-chart-line"></i> Overview</a>
+            <a href="#" class="menu-item"><i class="fas fa-user-astronaut"></i> Influencers <span style="background: var(--primary); padding: 0 0.4rem; border-radius: 1rem; font-size: 0.7rem;">12</span></a>
+            <a href="#" class="menu-item"><i class="fas fa-building"></i> Advertisers</a>
+            <a href="#" class="menu-item"><i class="fas fa-bullhorn"></i> Campaigns</a>
+            <a href="#" class="menu-item"><i class="fas fa-money-check-alt"></i> Payouts</a>
+            <a href="#" class="menu-item"><i class="fas fa-shield-alt"></i> KYC Verification</a>
+            <a href="#" class="menu-item"><i class="fas fa-cog"></i> Platform Settings</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h2>Platform Overview</h2>
+            <div style="background: white; padding: 0.5rem 1rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                <span style="font-weight: 600;">Status:</span> <span style="color: var(--success);"><i class="fas fa-circle" style="font-size: 0.6rem;"></i> Live</span>
+            </div>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <p style="color: var(--gray-500); font-size: 0.9rem;">Total Revenue</p>
+                <h3>₹18,45,000</h3>
+                <p style="color: var(--success); font-size: 0.8rem; margin-top: 0.5rem;">+24% from last month</p>
+            </div>
+            <div class="stat-card">
+                <p style="color: var(--gray-500); font-size: 0.9rem;">Platform Margin (30%)</p>
+                <h3>₹5,53,500</h3>
+            </div>
+            <div class="stat-card">
+                <p style="color: var(--gray-500); font-size: 0.9rem;">Total Influencers</p>
+                <h3>52,450</h3>
+            </div>
+            <div class="stat-card">
+                <p style="color: var(--gray-500); font-size: 0.9rem;">Pending Payouts</p>
+                <h3 style="color: var(--error);">₹1,20,000</h3>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h3>Pending Verifications</h3>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Type</th>
+                        <th>Platform</th>
+                        <th>Reach</th>
+                        <th>Applied On</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Arjun Mehta</strong></td>
+                        <td>Influencer</td>
+                        <td>Instagram</td>
+                        <td>45k</td>
+                        <td>May 04, 2026</td>
+                        <td>
+                            <button class="btn btn-primary btn-action">Approve</button>
+                            <button class="btn btn-outline btn-action" style="color: var(--error); border-color: var(--error);">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>TechTrendz Agency</strong></td>
+                        <td>Advertiser</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>May 04, 2026</td>
+                        <td>
+                            <button class="btn btn-primary btn-action">Approve</button>
+                            <button class="btn btn-outline btn-action" style="color: var(--error); border-color: var(--error);">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sara Ali</strong></td>
+                        <td>Influencer</td>
+                        <td>YouTube</td>
+                        <td>120k</td>
+                        <td>May 03, 2026</td>
+                        <td>
+                            <button class="btn btn-primary btn-action">Approve</button>
+                            <button class="btn btn-outline btn-action" style="color: var(--error); border-color: var(--error);">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
+            <div class="card">
+                <h3>Revenue by Category</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;">
+                            <span>Fashion & Beauty</span>
+                            <span>45%</span>
+                        </div>
+                        <div style="background: var(--gray-200); height: 8px; border-radius: 4px;">
+                            <div style="background: var(--primary); width: 45%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;">
+                            <span>Tech & Gaming</span>
+                            <span>25%</span>
+                        </div>
+                        <div style="background: var(--gray-200); height: 8px; border-radius: 4px;">
+                            <div style="background: var(--secondary); width: 25%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.3rem;">
+                            <span>Fitness & Health</span>
+                            <span>20%</span>
+                        </div>
+                        <div style="background: var(--gray-200); height: 8px; border-radius: 4px;">
+                            <div style="background: var(--accent); width: 20%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>System Logs</h3>
+                <div style="font-size: 0.8rem; color: var(--gray-600); margin-top: 1rem;">
+                    <p style="margin-bottom: 0.8rem; border-left: 2px solid var(--primary); padding-left: 1rem;">
+                        <span style="color: var(--dark); font-weight: 600;">10:45 AM</span> - New Campaign created by Adidas India
+                    </p>
+                    <p style="margin-bottom: 0.8rem; border-left: 2px solid var(--success); padding-left: 1rem;">
+                        <span style="color: var(--dark); font-weight: 600;">09:12 AM</span> - Payout of ₹12,000 processed for @creator_alex
+                    </p>
+                    <p style="margin-bottom: 0.8rem; border-left: 2px solid var(--warning); padding-left: 1rem;">
+                        <span style="color: var(--dark); font-weight: 600;">08:30 AM</span> - 15 New Influencers applied for verification
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-bottom-nav">
+        <a href="#" class="active"><i class="fas fa-th-large"></i><span>Home</span></a>
+        <a href="#"><i class="fas fa-bullhorn"></i><span>Ads</span></a>
+        <a href="#"><i class="fas fa-wallet"></i><span>Wallet</span></a>
+        <a href="#"><i class="fas fa-cog"></i><span>Settings</span></a>
+    </div>
+</body>
+</html>

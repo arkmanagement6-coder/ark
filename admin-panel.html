@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | ARK Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <style>
+        .admin-layout { display: flex; flex-direction: column; min-height: 100vh; background: var(--bg-gray); }
+        .admin-header { background: var(--primary-blue); color: var(--white); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+        .admin-body { padding: 40px; flex: 1; }
+        .admin-table th, .admin-table td { font-size: 0.85rem; white-space: nowrap; }
+        .table-wrapper { background: var(--white); border-radius: 15px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); overflow-x: auto; }
+        .filters { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+        .filters input, .filters select { padding: 10px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="admin-layout">
+        
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="logo-text" style="color: var(--white); font-size: 1.4rem;"><span class="highlight" style="color: var(--secondary-red);">R</span>evanta <span class="highlight" style="color: var(--secondary-red);">G</span>rowth</span>
+                </a>
+                <button class="mobile-menu-toggle" id="sidebar-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <button class="btn btn-secondary" style="padding: 8px 20px; font-size: 0.9rem;"><i class="fa-solid fa-download"></i> Export CSV</button>
+                <div class="user-avatar" style="width: 40px; height: 40px; font-size: 1rem; background: var(--white); color: var(--primary-blue);">A</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="admin-body">
+            
+            <div class="dash-card" style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 0;">Lead Management</h3>
+            </div>
+
+            <div class="table-wrapper">
+                
+                <div class="filters">
+                    <input type="text" placeholder="Search by name, business or email..." style="min-width: 300px;">
+                    <select>
+                        <option value="">All Categories</option>
+                        <option value="E-commerce">E-commerce</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="Education">Education</option>
+                    </select>
+                    <select>
+                        <option value="">All Lead Statuses</option>
+                        <option value="New Lead">New Lead</option>
+                        <option value="Contacted">Contacted</option>
+                        <option value="Converted">Converted</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Business Owner</th>
+                            <th>Business Name</th>
+                            <th>Email & Mobile</th>
+                            <th>Category</th>
+                            <th>City</th>
+                            <th>Required Services</th>
+                            <th>Budget</th>
+                            <th>Reg. Date</th>
+                            <th>Email Verify</th>
+                            <th>Lead Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ankit Sharma</strong></td>
+                            <td>TechStore Online</td>
+                            <td>ankit@techstore.in<br>+91 9876543210</td>
+                            <td>E-commerce</td>
+                            <td>Mumbai</td>
+                            <td>Website, Google Ads</td>
+                            <td>₹25k - ₹50k</td>
+                            <td>12 May 2026</td>
+                            <td><span style="color: #166534;"><i class="fa-solid fa-circle-check"></i> Verified</span></td>
+                            <td>
+                                <select class="form-control" style="padding: 5px 10px; font-size: 0.8rem; border-radius: 5px; height: auto;">
+                                    <option value="New Lead">New Lead</option>
+                                    <option value="Contacted">Contacted</option>
+                                    <option value="Converted" selected>Converted</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-icon" title="View Details"><i class="fa-solid fa-eye"></i></button>
+                                    <a href="https://wa.me/919876543210" class="btn-icon" style="color: #25d366;" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <button class="btn-icon delete" title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Priya Verma</strong></td>
+                            <td>FashionHub Boutique</td>
+                            <td>priya@fashionhub.com<br>+91 8765432109</td>
+                            <td>Fashion / Clothing</td>
+                            <td>Delhi</td>
+                            <td>Meta Ads, SEO</td>
+                            <td>₹10k - ₹25k</td>
+                            <td>13 May 2026</td>
+                            <td><span style="color: #b91c1c;"><i class="fa-solid fa-circle-xmark"></i> Pending</span></td>
+                            <td>
+                                <select class="form-control" style="padding: 5px 10px; font-size: 0.8rem; border-radius: 5px; height: auto;">
+                                    <option value="New Lead" selected>New Lead</option>
+                                    <option value="Contacted">Contacted</option>
+                                    <option value="Converted">Converted</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-icon" title="View Details"><i class="fa-solid fa-eye"></i></button>
+                                    <a href="https://wa.me/918765432109" class="btn-icon" style="color: #25d366;" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <button class="btn-icon delete" title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.filters input');
+            const categorySelect = document.querySelectorAll('.filters select')[0];
+            const statusSelect = document.querySelectorAll('.filters select')[1];
+            const tableRows = document.querySelectorAll('.admin-table tbody tr');
+            const exportBtn = document.querySelector('.btn-secondary');
+
+            function filterTable() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedCategory = categorySelect.value;
+                const selectedStatus = statusSelect.value;
+
+                tableRows.forEach(row => {
+                    const text = row.innerText.toLowerCase();
+                    const category = row.children[3].innerText;
+                    const status = row.querySelector('select').value;
+
+                    const matchesSearch = text.includes(searchTerm);
+                    const matchesCategory = selectedCategory === "" || category.includes(selectedCategory);
+                    const matchesStatus = selectedStatus === "" || status === selectedStatus;
+
+                    if (matchesSearch && matchesCategory && matchesStatus) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+
+            searchInput.addEventListener('input', filterTable);
+            categorySelect.addEventListener('change', filterTable);
+            statusSelect.addEventListener('change', filterTable);
+
+            // Export to CSV
+            exportBtn.addEventListener('click', function() {
+                let csv = [];
+                const rows = document.querySelectorAll("table tr");
+                
+                for (let i = 0; i < rows.length; i++) {
+                    let row = [], cols = rows[i].querySelectorAll("td, th");
+                    
+                    for (let j = 0; j < cols.length; j++) {
+                        // Clean text
+                        let data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, " ").replace(/(\s\s+)/gm, ' ');
+                        data = data.replace(/"/g, '""');
+                        row.push('"' + data + '"');
+                    }
+                    csv.push(row.join(","));
+                }
+
+                const csvFile = new Blob([csv.join("\n")], {type: "text/csv"});
+                const downloadLink = document.createElement("a");
+                downloadLink.download = "RGM_Leads_Export.csv";
+                downloadLink.href = window.URL.createObjectURL(csvFile);
+                downloadLink.style.display = "none";
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+            });
+        });
+    </script>
+</body>
+</html>
+

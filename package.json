@@ -1,0 +1,10 @@
+{
+  "name": "ark-website",
+  "version": "1.0.0",
+  "description": "ARK Management Agency",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {}
+}

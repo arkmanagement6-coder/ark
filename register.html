@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Your Business | ARK Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="auth-layout">
+        <!-- Left Side: Branding -->
+        <div class="auth-left">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <span class="logo-text" style="color: var(--white);"><span class="highlight" style="color: var(--secondary-red);">R</span>evanta <span class="highlight" style="color: var(--secondary-red);">G</span>rowth <span class="highlight" style="color: var(--secondary-red);">M</span>edia</span>
+                </a>
+            </div>
+            <h1>Take Your Business Digital with ARK Management</h1>
+            <p>Grow your business online with our high-end websites, conversion-focused ads, and comprehensive digital marketing services. Submit your details today.</p>
+        </div>
+
+        <!-- Right Side: Registration Form -->
+        <div class="auth-right">
+            <div class="auth-container">
+                <h2>Register Your Business</h2>
+                <p class="subtitle">Submit your details and get a free consultation.</p>
+
+                <!-- Step Indicator -->
+                <div class="step-indicator">
+                    <div class="step-dot active">1</div>
+                    <div class="step-dot">2</div>
+                    <div class="step-dot">3</div>
+                    <div class="step-dot">4</div>
+                </div>
+
+                <form id="registration-form" action="#" method="POST">
+                    
+                    <!-- Step 1: Personal Details -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email ID *</label>
+                            <input type="email" class="form-control" placeholder="Enter your business email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number *</label>
+                            <input type="tel" class="form-control" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password *</label>
+                            <input type="password" class="form-control" placeholder="Create password (Min 8 characters)" minlength="8" required>
+                            <i class="fa-solid fa-eye password-toggle"></i>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password *</label>
+                            <input type="password" class="form-control" placeholder="Re-enter password" required>
+                            <i class="fa-solid fa-eye password-toggle"></i>
+                        </div>
+                        <div class="auth-actions">
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 15px;">Already registered? <a href="login.html" class="text-red" style="font-weight: 600;">Login Here</a></p>
+                            <button type="button" class="btn btn-primary btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Business Details -->
+                    <div class="form-step" id="step2">
+                        <div class="form-group">
+                            <label>Business / Company Name *</label>
+                            <input type="text" class="form-control" placeholder="Enter your business name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Category *</label>
+                            <select class="form-control" id="business-category" required>
+                                <option value="" disabled selected>Select Business Type</option>
+                                <optgroup label="Standard Business">
+                                    <option value="Retail Store">Retail Store</option>
+                                    <option value="E-commerce Business">E-commerce Business</option>
+                                    <option value="Restaurant / Cafe / Food Business">Restaurant / Cafe / Food Business</option>
+                                    <option value="Hotel / Resort / Travel Agency">Hotel / Resort / Travel Agency</option>
+                                    <option value="Real Estate">Real Estate</option>
+                                    <option value="Education / Coaching Institute">Education / Coaching Institute</option>
+                                    <option value="Health Clinic / Doctor / Hospital">Health Clinic / Doctor / Hospital</option>
+                                    <option value="Fitness / Gym / Wellness">Fitness / Gym / Wellness</option>
+                                    <option value="Beauty Salon / Spa">Beauty Salon / Spa</option>
+                                    <option value="Fashion / Clothing">Fashion / Clothing</option>
+                                    <option value="Jewellery Business">Jewellery Business</option>
+                                    <option value="Grocery / Supermarket">Grocery / Supermarket</option>
+                                    <option value="Automobile / Car Dealer / Bike Dealer">Automobile / Car Dealer / Bike Dealer</option>
+                                    <option value="Event Management">Event Management</option>
+                                    <option value="Interior Design / Architecture">Interior Design / Architecture</option>
+                                    <option value="Construction / Contractor">Construction / Contractor</option>
+                                    <option value="Manufacturing Business">Manufacturing Business</option>
+                                    <option value="Wholesale / Distributor">Wholesale / Distributor</option>
+                                    <option value="Software / IT Company">Software / IT Company</option>
+                                    <option value="Digital Services">Digital Services</option>
+                                    <option value="Consultancy Services">Consultancy Services</option>
+                                    <option value="Financial Services">Financial Services</option>
+                                    <option value="Legal Services">Legal Services</option>
+                                    <option value="NGO / Trust">NGO / Trust</option>
+                                    <option value="Photography / Videography">Photography / Videography</option>
+                                    <option value="Bakery / Sweet Shop">Bakery / Sweet Shop</option>
+                                    <option value="Home Services">Home Services</option>
+                                    <option value="Courier / Logistics">Courier / Logistics</option>
+                                    <option value="Agriculture Business">Agriculture Business</option>
+                                    <option value="Pet Care Business">Pet Care Business</option>
+                                </optgroup>
+                                <optgroup label="Influencer & Creator">
+                                    <option value="Fashion & Beauty Influencer">Fashion & Beauty Influencer</option>
+                                    <option value="Lifestyle & Travel Influencer">Lifestyle & Travel Influencer</option>
+                                    <option value="Tech & Gadget Reviewer">Tech & Gadget Reviewer</option>
+                                    <option value="Fitness & Health Creator">Fitness & Health Creator</option>
+                                    <option value="Food & Cooking Influencer">Food & Cooking Influencer</option>
+                                    <option value="Gaming & Esports Creator">Gaming & Esports Creator</option>
+                                    <option value="Educational / Finance Influencer">Educational / Finance Influencer</option>
+                                    <option value="Business & Finance Influencer">Business & Finance Influencer</option>
+                                    <option value="Public Figure / Artist">Public Figure / Artist</option>
+                                    <option value="Blogger / Vlogger">Blogger / Vlogger</option>
+                                    <option value="General Content Creator">General Content Creator</option>
+                                </optgroup>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="other-category-group" style="display: none;">
+                            <label>Please Specify Category *</label>
+                            <input type="text" id="other-category" class="form-control" placeholder="Enter business type">
+                        </div>
+                        
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label>Address Line 1 *</label>
+                            <input type="text" class="form-control" placeholder="Shop/Office/Building name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line 2</label>
+                            <input type="text" class="form-control" placeholder="Area/Landmark">
+                        </div>
+                        <!-- Location Details -->
+                        <div class="form-group">
+                            <label>Country *</label>
+                            <select class="form-control" id="country" required>
+                                <option value="India" selected>India</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                                <option value="UAE">UAE</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div class="form-group">
+                                <label>State *</label>
+                                <select class="form-control" id="state" required>
+                                    <option value="" disabled selected>Select State</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Ladakh">Ladakh</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>City *</label>
+                                <input type="text" class="form-control" list="city-list" id="city" placeholder="Type or select city" required>
+                                <datalist id="city-list">
+                                    <option value="Mumbai">
+                                    <option value="Delhi">
+                                    <option value="Bangalore">
+                                    <option value="Hyderabad">
+                                    <option value="Ahmedabad">
+                                    <option value="Chennai">
+                                    <option value="Kolkata">
+                                    <option value="Surat">
+                                    <option value="Pune">
+                                    <option value="Jaipur">
+                                    <option value="Lucknow">
+                                    <option value="Kanpur">
+                                    <option value="Nagpur">
+                                    <option value="Indore">
+                                    <option value="Thane">
+                                    <option value="Bhopal">
+                                    <option value="Visakhapatnam">
+                                    <option value="Pimpri-Chinchwad">
+                                    <option value="Patna">
+                                    <option value="Vadodara">
+                                    <option value="Ghaziabad">
+                                    <option value="Ludhiana">
+                                    <option value="Agra">
+                                    <option value="Nashik">
+                                    <option value="Faridabad">
+                                    <option value="Meerut">
+                                    <option value="Rajkot">
+                                    <option value="Kalyan-Dombivli">
+                                    <option value="Vasai-Virar">
+                                    <option value="Varanasi">
+                                    <option value="Srinagar">
+                                    <option value="Aurangabad">
+                                    <option value="Dhanbad">
+                                    <option value="Amritsar">
+                                    <option value="Navi Mumbai">
+                                    <option value="Allahabad">
+                                    <option value="Ranchi">
+                                    <option value="Howrah">
+                                    <option value="Coimbatore">
+                                    <option value="Jabalpur">
+                                    <option value="Gwalior">
+                                    <option value="Vijayawada">
+                                    <option value="Jodhpur">
+                                    <option value="Madurai">
+                                    <option value="Raipur">
+                                    <option value="Kota">
+                                    <option value="Chandigarh">
+                                    <option value="Guwahati">
+                                    <option value="Solapur">
+                                    <option value="Hubli-Dharwad">
+                                    <option value="Mysore">
+                                    <option value="Tiruchirappalli">
+                                    <option value="Bareilly">
+                                    <option value="Aligarh">
+                                    <option value="Tiruppur">
+                                    <option value="Gurgaon">
+                                    <option value="Moradabad">
+                                    <option value="Jalandhar">
+                                    <option value="Bhubaneswar">
+                                    <option value="Salem">
+                                    <option value="Warangal">
+                                    <option value="Guntur">
+                                    <option value="Bhiwandi">
+                                    <option value="Saharanpur">
+                                    <option value="Gorakhpur">
+                                    <option value="Bikaner">
+                                    <option value="Amravati">
+                                    <option value="Noida">
+                                    <option value="Jamshedpur">
+                                    <option value="Bhilai">
+                                    <option value="Cuttack">
+                                    <option value="Firozabad">
+                                    <option value="Kochi">
+                                    <option value="Nellore">
+                                    <option value="Bhavnagar">
+                                    <option value="Dehradun">
+                                    <option value="Durgapur">
+                                    <option value="Asansol">
+                                    <option value="Rourkela">
+                                    <option value="Nanded">
+                                    <option value="Kolhapur">
+                                    <option value="Ajmer">
+                                    <option value="Akola">
+                                    <option value="Gulbarga">
+                                    <option value="Jamnagar">
+                                    <option value="Ujjain">
+                                    <option value="Loni">
+                                    <option value="Siliguri">
+                                    <option value="Jhansi">
+                                    <option value="Ulhasnagar">
+                                    <option value="Jammu">
+                                    <option value="Sangli-Miraj & Kupwad">
+                                    <option value="Mangalore">
+                                    <option value="Erode">
+                                    <option value="Belgaum">
+                                    <option value="Ambattur">
+                                    <option value="Tirunelveli">
+                                    <option value="Malegaon">
+                                    <option value="Gaya">
+                                    <option value="Jalgaon">
+                                    <option value="Udaipur">
+                                    <option value="Maheshtala">
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Pincode *</label>
+                            <input type="text" class="form-control" placeholder="Pincode" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Google Map Location Link (Optional)</label>
+                            <input type="url" class="form-control" placeholder="Map Link">
+                        </div>
+
+                        <div class="auth-actions">
+                            <button type="button" class="btn btn-outline btn-prev"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                            <button type="button" class="btn btn-primary btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Required Services -->
+                    <div class="form-step" id="step3">
+                        <div class="form-group" id="standard-services">
+                            <label>Business Services Required *</label>
+                            <div class="checkbox-group">
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Website Design"> Website Design</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Landing Page Design"> Landing Page Design</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="E-commerce Website"> E-commerce Website</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Mobile App Dev"> Mobile App Dev</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Digital Marketing"> Digital Marketing</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Meta Ads"> Meta Ads</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Google Ads"> Google Ads</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="SEO Services"> SEO Services</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Social Media Management"> SMM</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Lead Generation"> Lead Generation</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Branding & Logo Design"> Branding & Logo</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Graphic Design"> Graphic Design</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Video Editing"> Video Editing</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="WhatsApp Marketing"> WhatsApp Marketing</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Other"> Other</label>
+                            </div>
+                        </div>
+
+                        <!-- Influencer Specific Services (Hidden by default) -->
+                        <div class="form-group" id="influencer-services" style="display: none;">
+                            <label>Influencer & Creator Services Required *</label>
+                            <div class="checkbox-group">
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Brand Collaboration & PR"> Brand Collaboration & PR</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Media Kit Design"> Media Kit & Portfolio</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Profile Audit & Optimization"> Profile Optimization</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="YouTube Management"> YouTube Management</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Content Strategy"> Content Strategy</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Short-form Video Production"> Reels/Shorts Production</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="PR & Event Access"> PR & Event Access</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Growth & Monetization"> Growth & Monetization</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Legal & Contract Support"> Legal & Contracts</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Personal Branding"> Personal Branding</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Account Management"> Account Management</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Analytics & Reporting"> Analytics & Reporting</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Sponsorship Management"> Sponsorships</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Influencer PR Box Design"> PR Box Design</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Podcast Setup & Production"> Podcast Production</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Discord/Community Building"> Community Building</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Newsletter Strategy"> Creator Newsletter</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Merchandise Setup"> Merch Store Setup</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Verification Assistance"> Blue Tick Assistance</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Creator Workshops"> Creator Workshops</label>
+                                <label class="custom-checkbox"><input type="checkbox" name="services" value="Other Creator Service"> Other Creator Needs</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Requirement Description</label>
+                            <textarea class="form-control" rows="3" placeholder="Tell us what you need for your business."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Budget Range *</label>
+                            <select class="form-control" required>
+                                <option value="" disabled selected>Select Budget</option>
+                                <option value="₹3,000 – ₹5,000">₹3,000 – ₹5,000</option>
+                                <option value="₹5,000 – ₹10,000">₹5,000 – ₹10,000</option>
+                                <option value="₹10,000 – ₹25,000">₹10,000 – ₹25,000</option>
+                                <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
+                                <option value="₹50,000+">₹50,000+</option>
+                            </select>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div class="form-group">
+                                <label>Preferred Contact Method</label>
+                                <select class="form-control">
+                                    <option value="Call">Call</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                    <option value="Email">Email</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Contact Time</label>
+                                <select class="form-control">
+                                    <option value="Morning">Morning</option>
+                                    <option value="Afternoon">Afternoon</option>
+                                    <option value="Evening">Evening</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="auth-actions">
+                            <button type="button" class="btn btn-outline btn-prev"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                            <button type="button" class="btn btn-primary btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Verification & Consent -->
+                    <div class="form-step" id="step4">
+
+
+                        <div class="form-group">
+                            <label class="custom-checkbox" style="margin-bottom: 15px;">
+                                <input type="checkbox" required>
+                                <span>I agree to the <a href="terms-conditions.html" class="text-red">Terms & Conditions</a>.</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" required>
+                                <span>I agree to receive calls, WhatsApp, and email from ARK Management.</span>
+                            </label>
+                        </div>
+
+                        <div class="auth-actions" style="margin-top: 40px;">
+                            <button type="button" class="btn btn-outline btn-prev"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                            <button type="submit" class="btn btn-primary">Register My Business</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="js/auth.js"></script>
+</body>
+</html>
+

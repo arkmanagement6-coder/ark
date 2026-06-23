@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | ARK Creator Network</title>
+    <link rel="stylesheet" href="/influencers/css/influencers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .pricing-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            gap: 1rem;
+        }
+        .toggle-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            border: 2px solid var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .toggle-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .price-card.featured {
+                transform: none;
+            }
+        }
+        .price-card {
+            text-align: center;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            overflow: hidden;
+            background: white;
+            transition: var(--transition);
+        }
+        .price-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+            z-index: 1;
+        }
+        .price-header {
+            padding: 3rem 2rem;
+            background: var(--gray-100);
+        }
+        .price-card.featured .price-header {
+            background: var(--primary);
+            color: white;
+        }
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+        .price-features {
+            padding: 2rem;
+            list-style: none;
+        }
+        .price-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-100);
+            color: var(--gray-600);
+        }
+        .price-features li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">ARK <span style="color: var(--dark);">CREATORS</span></a>
+                <ul class="nav-links">
+                    <li><a href="/influencers/brands">For Brands</a></li>
+                    <li><a href="/influencers/creators">For Creators</a></li>
+                    <li><a href="/influencers/marketplace">Marketplace</a></li>
+                    <li><a href="/influencers/pricing" class="active">Pricing</a></li>
+                </ul>
+                <div class="nav-btns">
+                    <a href="/influencers/dashboard/index" class="btn btn-outline">Login</a>
+                    <a href="/influencers/dashboard/index" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-toggle" id="mobile-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button class="mobile-close" id="mobile-close"><i class="fas fa-times"></i></button>
+            <ul class="mobile-nav-links">
+                <li><a href="/influencers">Home</a></li>
+                <li><a href="/influencers/brands">For Brands</a></li>
+                <li><a href="/influencers/creators">For Creators</a></li>
+                <li><a href="/influencers/marketplace">Marketplace</a></li>
+                <li><a href="/influencers/pricing">Pricing</a></li>
+                <li><a href="/influencers/dashboard/index" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main style="padding-top: 8rem;">
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Simple, Transparent Pricing</h2>
+                    <p>Choose the plan that fits your business needs. No hidden costs.</p>
+                </div>
+
+                <div class="pricing-toggle">
+                    <div class="toggle-btn active">For Brands</div>
+                    <div class="toggle-btn">For Creators</div>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Starter Plan -->
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>Starter</h3>
+                            <div class="price-amount">₹2,999<span style="font-size: 1rem;">/mo</span></div>
+                            <p>Perfect for small businesses</p>
+                        </div>
+                        <ul class="price-features">
+                            <li>10 Influencer Searches</li>
+                            <li>Basic Analytics</li>
+                            <li>1 Active Campaign</li>
+                            <li>Email Support</li>
+                            <li>Standard Reports</li>
+                        </ul>
+                        <div style="padding: 2rem;">
+                            <a href="#" class="btn btn-outline" style="width: 100%;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Growth Plan -->
+                    <div class="price-card featured">
+                        <div class="price-header">
+                            <h3>Growth</h3>
+                            <div class="price-amount">₹7,999<span style="font-size: 1rem; color: rgba(255,255,255,0.8);">/mo</span></div>
+                            <p>For scaling your brand</p>
+                        </div>
+                        <ul class="price-features">
+                            <li>100 Influencer Searches</li>
+                            <li>Advanced Filters</li>
+                            <li>5 Active Campaigns</li>
+                            <li>Campaign Reporting</li>
+                            <li>In-platform Chat</li>
+                        </ul>
+                        <div style="padding: 2rem;">
+                            <a href="#" class="btn btn-primary" style="width: 100%; background: white; color: var(--primary);">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>Pro</h3>
+                            <div class="price-amount">₹14,999<span style="font-size: 1rem;">/mo</span></div>
+                            <p>For high-volume campaigns</p>
+                        </div>
+                        <ul class="price-features">
+                            <li>Unlimited Searches</li>
+                            <li>Advanced Analytics</li>
+                            <li>Fake Follower Check</li>
+                            <li>Campaign Management</li>
+                            <li>Priority Support</li>
+                        </ul>
+                        <div style="padding: 2rem;">
+                            <a href="#" class="btn btn-outline" style="width: 100%;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem;">
+                    <h3>Need something custom?</h3>
+                    <p style="margin-bottom: 2rem;">Contact us for Enterprise plans and managed agency services.</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Managed Service -->
+        <section style="background: var(--dark); color: white;">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 style="color: white;">Managed Campaign Service</h2>
+                        <p style="color: var(--gray-400);">Don't have time to manage it yourself? Let our experts handle everything from strategy to execution.</p>
+                        <ul style="margin-top: 2rem; color: var(--gray-300);">
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Dedicated Account Manager</li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> End-to-end Strategy & Execution</li>
+                            <li><i class="fas fa-check" style="color: var(--primary);"></i> Guaranteed Performance & ROI</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Learn More</a>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="card glass-dark">
+                            <h4 style="color: white; margin-bottom: 1.5rem;">Agency Service Fee</h4>
+                            <p style="font-size: 2rem; font-weight: 800; color: var(--primary);">15% - 30%</p>
+                            <p style="color: var(--gray-400);">of campaign budget</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARK Management. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/influencers/js/influencers.js"></script>
+</body>
+</html>

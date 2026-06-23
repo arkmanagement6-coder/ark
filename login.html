@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Login | ARK Management</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="auth-layout">
+        <!-- Left Side: Branding -->
+        <div class="auth-left">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <span class="logo-text" style="color: var(--white);"><span class="highlight" style="color: var(--secondary-red);">R</span>evanta <span class="highlight" style="color: var(--secondary-red);">G</span>rowth <span class="highlight" style="color: var(--secondary-red);">M</span>edia</span>
+                </a>
+            </div>
+            <h1>Welcome Back to Your Growth Dashboard</h1>
+            <p>Manage your services, view your leads, and track your business growth all from one place.</p>
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div class="auth-right">
+            <div class="auth-container">
+                <h2>Login to Your Account</h2>
+                <p class="subtitle">Enter your email and password to access your dashboard.</p>
+
+
+
+                <form id="login-form" action="#" method="POST">
+                    
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your registered email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                        <i class="fa-solid fa-eye password-toggle"></i>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                        <label class="custom-checkbox">
+                            <input type="checkbox">
+                            <span>Remember Me</span>
+                        </label>
+                        <a href="#" style="font-size: 0.9rem; color: var(--secondary-red); font-weight: 600;">Forgot Password?</a>
+                    </div>
+
+                    <div class="auth-actions" style="margin-top: 0;">
+                        <button type="submit" class="btn btn-primary btn-block">Login to Dashboard</button>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <p style="font-size: 0.9rem; color: #666;">Don't have an account? <a href="register.html" class="text-red" style="font-weight: 600;">Register Business</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="js/auth.js"></script>
+</body>
+</html>
+

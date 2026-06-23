@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Marketplace | ARK Creator Network</title>
+    <link rel="stylesheet" href="/influencers/css/influencers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .filter-sidebar {
+            width: 300px;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+            box-shadow: var(--shadow-md);
+        }
+        .marketplace-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            padding-bottom: 5rem;
+        }
+        .filter-group {
+            margin-bottom: 2rem;
+        }
+        .filter-group h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            cursor: pointer;
+        }
+        .creator-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .creator-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .creator-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+        .creator-img { width: 100%; height: 200px; object-fit: cover; }
+        .creator-body { padding: 1.5rem; }
+        .creator-stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            padding: 0.8rem 0;
+            border-top: 1px solid var(--gray-100);
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">ARK <span style="color: var(--dark);">CREATORS</span></a>
+                <ul class="nav-links">
+                    <li><a href="/influencers/brands">For Brands</a></li>
+                    <li><a href="/influencers/creators">For Creators</a></li>
+                    <li><a href="/influencers/marketplace" class="active">Marketplace</a></li>
+                    <li><a href="/influencers/pricing">Pricing</a></li>
+                </ul>
+                <div class="nav-btns">
+                    <a href="/influencers/dashboard/index" class="btn btn-outline">Login</a>
+                    <a href="/influencers/dashboard/index" class="btn btn-primary">Join Now</a>
+                    <button class="mobile-toggle" id="mobile-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button class="mobile-close" id="mobile-close"><i class="fas fa-times"></i></button>
+            <ul class="mobile-nav-links">
+                <li><a href="/influencers">Home</a></li>
+                <li><a href="/influencers/brands">For Brands</a></li>
+                <li><a href="/influencers/creators">For Creators</a></li>
+                <li><a href="/influencers/marketplace">Marketplace</a></li>
+                <li><a href="/influencers/pricing">Pricing</a></li>
+                <li><a href="/influencers/dashboard/index" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main style="padding-top: 8rem; background: var(--light);">
+        <div class="container">
+            <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+                <h2>Discover Top Creators</h2>
+                <p>Filter through 50,000+ verified influencers to find your perfect match.</p>
+            </div>
+
+            <div class="marketplace-layout">
+                <aside class="filter-sidebar">
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="filter-option"><input type="checkbox"> Fashion & Beauty</div>
+                        <div class="filter-option"><input type="checkbox" checked> Tech & Gadgets</div>
+                        <div class="filter-option"><input type="checkbox"> Fitness & Health</div>
+                        <div class="filter-option"><input type="checkbox"> Travel & Lifestyle</div>
+                        <div class="filter-option"><input type="checkbox"> Food & Drink</div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Platform</h4>
+                        <div class="filter-option"><input type="checkbox" checked> Instagram</div>
+                        <div class="filter-option"><input type="checkbox"> YouTube</div>
+                        <div class="filter-option"><input type="checkbox"> LinkedIn</div>
+                        <div class="filter-option"><input type="checkbox"> Facebook</div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Followers</h4>
+                        <div class="filter-option"><input type="radio" name="fol"> 1k - 10k (Nano)</div>
+                        <div class="filter-option"><input type="radio" name="fol" checked> 10k - 100k (Micro)</div>
+                        <div class="filter-option"><input type="radio" name="fol"> 100k - 500k (Mid)</div>
+                        <div class="filter-option"><input type="radio" name="fol"> 500k+ (Macro)</div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Location</h4>
+                        <select style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid var(--gray-300);">
+                            <option>All India</option>
+                            <option>Mumbai</option>
+                            <option>Delhi NCR</option>
+                            <option>Bangalore</option>
+                            <option>Hyderabad</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+                </aside>
+
+                <div class="creator-grid">
+                    <!-- Creator 1 -->
+                    <div class="creator-card">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="creator-img" alt="Creator">
+                        <div class="creator-body">
+                            <h4 style="margin-bottom: 0.2rem;">Karan Sharma</h4>
+                            <p style="font-size: 0.8rem; color: var(--gray-500);"><i class="fas fa-map-marker-alt"></i> Mumbai, IN</p>
+                            <div class="creator-stats">
+                                <div><strong>45k</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Followers</span></div>
+                                <div><strong>5.2%</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Engagement</span></div>
+                                <div><strong>₹15k</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Avg Price</span></div>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <span style="background: var(--gray-100); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Tech</span>
+                                <span style="background: var(--gray-100); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Lifestyle</span>
+                            </div>
+                            <a href="dashboard/advertiser.html" class="btn btn-outline" style="width: 100%;">View Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- Creator 2 -->
+                    <div class="creator-card">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="creator-img" alt="Creator">
+                        <div class="creator-body">
+                            <h4 style="margin-bottom: 0.2rem;">Ishita Ray</h4>
+                            <p style="font-size: 0.8rem; color: var(--gray-500);"><i class="fas fa-map-marker-alt"></i> Bangalore, IN</p>
+                            <div class="creator-stats">
+                                <div><strong>120k</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Followers</span></div>
+                                <div><strong>4.8%</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Engagement</span></div>
+                                <div><strong>₹35k</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Avg Price</span></div>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <span style="background: var(--gray-100); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Fashion</span>
+                                <span style="background: var(--gray-100); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Beauty</span>
+                            </div>
+                            <a href="dashboard/advertiser.html" class="btn btn-outline" style="width: 100%;">View Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- Creator 3 -->
+                    <div class="creator-card">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="creator-img" alt="Creator">
+                        <div class="creator-body">
+                            <h4 style="margin-bottom: 0.2rem;">Vikram Singh</h4>
+                            <p style="font-size: 0.8rem; color: var(--gray-500);"><i class="fas fa-map-marker-alt"></i> Delhi, IN</p>
+                            <div class="creator-stats">
+                                <div><strong>85k</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Followers</span></div>
+                                <div><strong>6.5%</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Engagement</span></div>
+                                <div><strong>₹22k</strong><br><span style="color: var(--gray-400); font-size: 0.7rem;">Avg Price</span></div>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <span style="background: var(--gray-100); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Fitness</span>
+                                <span style="background: var(--gray-100); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Sports</span>
+                            </div>
+                            <a href="dashboard/advertiser.html" class="btn btn-outline" style="width: 100%;">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/influencers/js/influencers.js"></script>
+</body>
+</html>

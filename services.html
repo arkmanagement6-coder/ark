@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | ARK Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .services-hero { background: var(--primary-blue); padding: 160px 0 100px; text-align: center; color: var(--white); }
+        
+        .service-nav { background: var(--white); position: sticky; top: 70px; z-index: 900; padding: 15px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap; }
+        .service-nav-links { display: flex; justify-content: center; gap: 20px; }
+        .service-nav-links a { color: var(--text-dark); font-weight: 600; font-size: 0.9rem; padding: 8px 15px; border-radius: 20px; }
+        .service-nav-links a:hover { color: var(--secondary-red); background: var(--bg-gray); }
+
+        .service-row { padding: 100px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .service-row:nth-child(even) { direction: rtl; }
+        .service-row:nth-child(even) .service-text { direction: ltr; }
+        
+        .service-image { background: var(--bg-gray); border-radius: 30px; height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+        .service-image i { font-size: 10rem; color: var(--primary-blue); opacity: 0.1; position: absolute; }
+        .service-image .floating-ui { position: relative; z-index: 2; width: 80%; height: 70%; }
+
+        .service-text h2 { font-size: 2.8rem; color: var(--primary-blue); margin-bottom: 25px; line-height: 1.2; }
+        .service-text p { font-size: 1.1rem; color: #555; margin-bottom: 30px; }
+        .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .feature-item { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-dark); }
+        .feature-item i { color: #25d366; }
+
+        @media (max-width: 992px) {
+            .service-row { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .service-row:nth-child(even) { direction: ltr; }
+            .feature-list { grid-template-columns: 1fr; text-align: left; max-width: 400px; margin: 0 auto; }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1428184878228303');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1428184878228303&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header scrolled">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text"><span class="highlight">A</span>RK <span class="highlight">M</span>anagement</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-btn">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="nav-btn">About <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-btn active">Services <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#web-dev">Website Design & Development</a></li>
+                            <li><a href="services.html#ecommerce">E-commerce Store Design & Dev</a></li>
+                            <li><a href="services.html#google-ads">Google Ads</a></li>
+                            <li><a href="services.html#meta-ads">Meta Ads</a></li>
+                            <li><a href="services.html#seo">SEO</a></li>
+                            <li><a href="services.html#smm">Social Media Management</a></li>
+                            <li><a href="services.html#whatsapp">WhatsApp Marketing</a></li>
+                            <li><a href="services.html#crm">CRM Integration</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="nav-btn">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/918433206010" class="btn btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Whatsapp Connect
+                </a>
+                <button class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="container">
+            <span class="badge" style="background: var(--white); color: var(--primary-blue); margin-bottom: 20px;">What We Offer</span>
+            <h1 style="font-size: 3.5rem;">Empowering Your Brand with <br> <span class="text-orange">Next-Gen Digital Solutions</span></h1>
+            <p style="max-width: 700px; margin: 20px auto; opacity: 0.8;">We blend creativity with technology to help your business grow in the digital era. Explore our comprehensive suite of services.</p>
+        </div>
+    </section>
+
+    <div class="service-nav">
+        <div class="container">
+            <div class="service-nav-links">
+                <a href="#web-dev">Web Dev</a>
+                <a href="#ecommerce">E-commerce</a>
+                <a href="#google-ads">Google Ads</a>
+                <a href="#meta-ads">Meta Ads</a>
+                <a href="#seo">SEO</a>
+                <a href="#smm">SMM</a>
+                <a href="#whatsapp">WhatsApp</a>
+                <a href="#crm">CRM</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            
+            <!-- Web Dev -->
+            <div id="web-dev" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Website Design and Development" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>Website Design & <br>Development</h2>
+                    <p>We build high-performance, responsive websites that serve as your brand's digital headquarters. Our focus is on speed, user experience, and conversion optimization.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Custom UI/UX Design</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Mobile First Approach</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> SEO Optimized Code</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> 1-Year Support</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Start Your Project</a>
+                </div>
+            </div>
+
+            <!-- E-commerce -->
+            <div id="ecommerce" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="E-commerce Development" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>E-commerce Store <br>Development</h2>
+                    <p>Launch your online store with a powerful platform built for sales. We handle everything from payment integration to inventory management systems.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Shopify & WooCommerce</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Secure Payments</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Inventory Sync</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Sales Dashboard</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Build My Store</a>
+                </div>
+            </div>
+
+            <!-- Google Ads -->
+            <div id="google-ads" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Google Ads Management" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>Google Ads (PPC) <br>Management</h2>
+                    <p>Get found when it matters most. We create high-intent search campaigns that put your business at the top of Google search results.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Search & Display Ads</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> High-ROI Strategies</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Keyword Research</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Monthly Reporting</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Get More Leads</a>
+                </div>
+            </div>
+
+            <!-- Meta Ads -->
+            <div id="meta-ads" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Meta Ads and Instagram Marketing" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>Meta Ads (FB & IG) <br>Campaigns</h2>
+                    <p>Stop the scroll and convert. Our creative Meta ad strategies target the right audience to build brand awareness and drive direct sales.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Target Audience Audit</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Ad Creative Design</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Retargeting Funnels</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Lead Generation</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Start Advertising</a>
+                </div>
+            </div>
+
+            <!-- SEO -->
+            <div id="seo" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Search Engine Optimization" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>Search Engine <br>Optimization (SEO)</h2>
+                    <p>Rank higher, grow faster. Our technical and content-driven SEO strategies help you dominate search engine results without paying for ads.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> On-Page SEO</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Backlink Building</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Local SEO (GMB)</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Speed Optimization</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Audit My Website</a>
+                </div>
+            </div>
+
+            <!-- SMM -->
+            <div id="smm" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Social Media Marketing" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>Social Media <br>Marketing</h2>
+                    <p>Engage your audience and build brand loyalty. We create compelling content and manage your presence across all major social media platforms.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Content Creation</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Community Management</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Influencer Outreach</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Performance Tracking</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Grow Your Audience</a>
+                </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div id="whatsapp" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="WhatsApp Marketing" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>WhatsApp <br>Marketing</h2>
+                    <p>Connect with your customers directly. We leverage WhatsApp APIs to send personalized promotions, automate support, and drive instant conversions.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Bulk Messaging</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Chatbot Automation</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Customer Support</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> High Open Rates</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Start Messaging</a>
+                </div>
+            </div>
+
+            <!-- CRM -->
+            <div id="crm" class="service-row">
+                <div class="service-image" style="background: transparent; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="CRM Integration" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="service-text">
+                    <h2>CRM <br>Integration</h2>
+                    <p>Streamline your sales process. We integrate powerful CRM systems to help you track leads, manage customer relationships, and automate your workflow.</p>
+                    <div class="feature-list">
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Lead Tracking</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Workflow Automation</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Sales Pipeline</div>
+                        <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Custom Dashboards</div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary mt-50">Optimize Sales</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text"><span class="highlight">A</span>RK <span class="highlight">M</span>anagement</span>
+                        </a>
+                    </div>
+                    <p style="margin-top: 20px; opacity: 0.7;">We are a result-oriented digital marketing agency helping businesses scale with data-driven strategies and premium IT solutions.</p>
+                    <div class="footer-contact" style="margin-top: 20px;">
+                        <p style="opacity: 0.7; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-phone" style="color: var(--secondary-red);"></i>
+                            <span>+91 8433206010</span>
+                        </p>
+                        <p style="opacity: 0.7; margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-envelope" style="color: var(--secondary-red);"></i>
+                            <span>arkmanagementagra@gmail.com</span>
+                        </p>
+                        <p style="opacity: 0.7; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-location-dot" style="color: var(--secondary-red);"></i>
+                            <span>21/272/1/4-A Patel Nagar, Jeoni Mandi, Agra 282004</span>
+                        </p>
+                    </div>
+                    
+                    <div class="footer-pay-now" style="margin-top: 20px; margin-bottom: 20px;">
+                        <a href="pay.html" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3); border-radius: 50px;">
+                            <i class="fa-solid fa-credit-card"></i> Pay Online Now
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61567641386250" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/arkmanagementagra/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/118114291/admin/dashboard/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    
+                
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#web-dev">Web Development</a></li>
+                        <li><a href="services.html#google-ads">Google Ads</a></li>
+                        <li><a href="services.html#meta-ads">Meta Ads</a></li>
+                        <li><a href="services.html#seo">SEO</a></li>
+                        <li><a href="services.html#whatsapp">WhatsApp Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal Policies</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ARK Management. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
