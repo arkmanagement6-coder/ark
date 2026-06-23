@@ -58,7 +58,7 @@ const pages = {
                 <li>Opt-out of marketing communications</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact Us</h2>
-            <p>For privacy-related concerns, contact:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagementagra@gmail.com</p>
+            <p>For privacy-related concerns, contact:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
         `
     },
     'refund-policy.html': {
@@ -89,7 +89,7 @@ const pages = {
                 <li>Refund will be credited via original payment method</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact for Refund</h2>
-            <p>Email: arkmanagementagra@gmail.com</p>
+            <p>Email: arkmanagement@ikkodigital.shop</p>
         `
     },
     'terms-conditions.html': {
@@ -143,7 +143,7 @@ const pages = {
             <h2><i class="fa-solid fa-file-signature" style="margin-right: 8px;"></i> Changes to Terms</h2>
             <p>We reserve the right to update these terms at any time.</p>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>Email: arkmanagementagra@gmail.com</p>
+            <p>Email: arkmanagement@ikkodigital.shop</p>
         `
     },
     'shipping-policy.html': {
@@ -182,7 +182,7 @@ const pages = {
                 <li>Technical issues</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>For delivery-related queries:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagementagra@gmail.com</p>
+            <p>For delivery-related queries:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
         `
     },
     'cookie-policy.html': {
@@ -236,7 +236,7 @@ const pages = {
             <h2><i class="fa-solid fa-gear" style="margin-right: 8px;"></i> Managing Cookies</h2>
             <p>You can control or disable cookies through your browser settings. However, disabling cookies may affect website functionality.</p>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>For any queries regarding this policy:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagementagra@gmail.com</p>
+            <p>For any queries regarding this policy:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
         `
     },
     'disclaimer.html': {
@@ -272,7 +272,7 @@ const pages = {
                 <li>Technical or third-party issues</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>For any concerns:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagementagra@gmail.com</p>
+            <p>For any concerns:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
         `
     }
 };
