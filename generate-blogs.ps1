@@ -8,7 +8,7 @@ $footer = [regex]::Match($aboutHtml, '(?is)<footer class="footer">.*?</footer>')
 $scripts = '<script src="js/script.js"></script>'
 
 function Generate-BlogPage($fileName, $title, $heroImg, $bodyContent) {
-    $titleTag = "<title>$title | ARK Management Blog</title>"
+    $titleTag = "<title>$title | Revanta Growth Media Blog</title>"
     $newHead = $head -replace '(?is)<title>.*?</title>', $titleTag
     
     $html = @"

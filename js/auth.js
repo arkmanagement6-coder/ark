@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         registerForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // Show success message
-            alert("Registration Successful!\n\nThank you for registering with ARK Management. Your account has been created. You can now login to your dashboard.");
+            alert("Registration Successful!\n\nThank you for registering with Revanta Growth Media. Your account has been created. You can now login to your dashboard.");
             window.location.href = "login.html";
         });
     }

@@ -8,7 +8,7 @@ $footer = [regex]::Match($aboutHtml, '(?is)<footer class="footer">.*?</footer>')
 $scripts = '<script src="js/script.js"></script>'
 
 function Generate-Page($fileName, $title, $bodyContent) {
-    $titleTag = "<title>$title | ARK Management</title>"
+    $titleTag = "<title>$title | Revanta Growth Media</title>"
     $newHead = $head -replace '(?is)<title>.*?</title>', $titleTag
     
     $html = @"
@@ -43,7 +43,7 @@ $scripts
 
 $privacy = @"
             <h2><i class="fa-solid fa-thumbtack" style="margin-right: 8px;"></i> Introduction</h2>
-            <p>ARK Management respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or use our services.</p>
+            <p>Revanta Growth Media respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or use our services.</p>
             <p>By accessing our website, you agree to the terms of this Privacy Policy.</p>
             <h2><i class="fa-solid fa-chart-simple" style="margin-right: 8px;"></i> Information We Collect</h2>
             <p>We may collect the following information:</p>
@@ -95,12 +95,12 @@ $privacy = @"
                 <li>Opt-out of marketing communications</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact Us</h2>
-            <p>For privacy-related concerns, contact:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
+            <p>For privacy-related concerns, contact:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> info@revantagrowthmedia.com</p>
 "@
 
 $refund = @"
             <h2><i class="fa-solid fa-thumbtack" style="margin-right: 8px;"></i> Overview</h2>
-            <p>At ARK Management, we strive to deliver high-quality services. However, we understand that situations may arise where you need to cancel your order.</p>
+            <p>At Revanta Growth Media, we strive to deliver high-quality services. However, we understand that situations may arise where you need to cancel your order.</p>
             <h2><i class="fa-solid fa-rotate" style="margin-right: 8px;"></i> Refund Eligibility</h2>
             <ul>
                 <li>Customers can request a refund within 7 days of payment</li>
@@ -124,12 +124,12 @@ $refund = @"
                 <li>Refund will be credited via original payment method</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact for Refund</h2>
-            <p>Email: arkmanagement@ikkodigital.shop</p>
+            <p>Email: info@revantagrowthmedia.com</p>
 "@
 
 $terms = @"
             <h2><i class="fa-solid fa-thumbtack" style="margin-right: 8px;"></i> Introduction</h2>
-            <p>By accessing and using the website of ARK Management, you agree to comply with the following terms and conditions.</p>
+            <p>By accessing and using the website of Revanta Growth Media, you agree to comply with the following terms and conditions.</p>
             <h2><i class="fa-solid fa-screwdriver-wrench" style="margin-right: 8px;"></i> Services</h2>
             <p>We provide services including:</p>
             <ul>
@@ -163,7 +163,7 @@ $terms = @"
             </ul>
             <h2><i class="fa-solid fa-lock" style="margin-right: 8px;"></i> Intellectual Property</h2>
             <ul>
-                <li>All content, designs, and materials created remain property of ARK Management until full payment is made</li>
+                <li>All content, designs, and materials created remain property of Revanta Growth Media until full payment is made</li>
                 <li>Unauthorized use is prohibited</li>
             </ul>
             <h2><i class="fa-solid fa-scale-balanced" style="margin-right: 8px;"></i> Limitation of Liability</h2>
@@ -176,13 +176,13 @@ $terms = @"
             <h2><i class="fa-solid fa-file-signature" style="margin-right: 8px;"></i> Changes to Terms</h2>
             <p>We reserve the right to update these terms at any time.</p>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>Email: arkmanagement@ikkodigital.shop</p>
+            <p>Email: info@revantagrowthmedia.com</p>
 "@
 
 $shipping = @"
             <p>(Applicable for digital services & products)</p>
             <h2><i class="fa-solid fa-thumbtack" style="margin-right: 8px;"></i> Overview</h2>
-            <p>ARK Management provides digital services, so there is no physical shipping involved.</p>
+            <p>Revanta Growth Media provides digital services, so there is no physical shipping involved.</p>
             <h2><i class="fa-solid fa-laptop" style="margin-right: 8px;"></i> Service Delivery</h2>
             <ul>
                 <li>Website development: 3&ndash;10 working days (depending on project)</li>
@@ -213,12 +213,12 @@ $shipping = @"
                 <li>Technical issues</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>For delivery-related queries:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
+            <p>For delivery-related queries:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> info@revantagrowthmedia.com</p>
 "@
 
 $cookie = @"
             <h2><i class="fa-solid fa-thumbtack" style="margin-right: 8px;"></i> Introduction</h2>
-            <p>This Cookie Policy explains how ARK Management uses cookies and similar technologies to recognize visitors when they visit our website.</p>
+            <p>This Cookie Policy explains how Revanta Growth Media uses cookies and similar technologies to recognize visitors when they visit our website.</p>
             <p>By using our website, you agree to the use of cookies as described in this policy.</p>
             <h2><i class="fa-solid fa-cookie-bite" style="margin-right: 8px;"></i> What Are Cookies?</h2>
             <p>Cookies are small data files stored on your device when you visit a website. They help improve your browsing experience and allow us to analyze website performance.</p>
@@ -265,12 +265,12 @@ $cookie = @"
             <h2><i class="fa-solid fa-gear" style="margin-right: 8px;"></i> Managing Cookies</h2>
             <p>You can control or disable cookies through your browser settings. However, disabling cookies may affect website functionality.</p>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>For any queries regarding this policy:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
+            <p>For any queries regarding this policy:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> info@revantagrowthmedia.com</p>
 "@
 
 $disclaimer = @"
             <h2><i class="fa-solid fa-thumbtack" style="margin-right: 8px;"></i> General Disclaimer</h2>
-            <p>The information provided by ARK Management on this website is for general informational and business purposes only.</p>
+            <p>The information provided by Revanta Growth Media on this website is for general informational and business purposes only.</p>
             <p>We make every effort to ensure accuracy but do not guarantee completeness, reliability, or accuracy of any information.</p>
             <h2><i class="fa-solid fa-chart-simple" style="margin-right: 8px;"></i> Marketing Results Disclaimer</h2>
             <ul>
@@ -292,14 +292,14 @@ $disclaimer = @"
             <h2><i class="fa-solid fa-link" style="margin-right: 8px;"></i> External Links Disclaimer</h2>
             <p>Our website may contain links to third-party websites.<br>We are not responsible for their content, policies, or practices.</p>
             <h2><i class="fa-solid fa-scale-balanced" style="margin-right: 8px;"></i> Limitation of Liability</h2>
-            <p>ARK Management shall not be held liable for:</p>
+            <p>Revanta Growth Media shall not be held liable for:</p>
             <ul>
                 <li>Any direct or indirect business losses</li>
                 <li>Loss of data or revenue</li>
                 <li>Technical or third-party issues</li>
             </ul>
             <h2><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> Contact</h2>
-            <p>For any concerns:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> arkmanagement@ikkodigital.shop</p>
+            <p>For any concerns:<br><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> info@revantagrowthmedia.com</p>
 "@
 
 Generate-Page "privacy-policy.html" "Privacy Policy" $privacy

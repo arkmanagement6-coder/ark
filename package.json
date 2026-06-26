@@ -1,7 +1,7 @@
 {
-  "name": "ark-website",
+  "name": "rgm-website",
   "version": "1.0.0",
-  "description": "ARK Management Agency",
+  "description": "RGM Digital Marketing Agency",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

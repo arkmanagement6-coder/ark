@@ -1,5 +1,5 @@
 /**
- * ARK Management - Custom Interactivity v2.0
+ * Revanta Growth Media - Custom Interactivity v2.0
  */
 
 document.addEventListener('DOMContentLoaded', () => {
